@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+  </head>
+    <body>
+        <h1 class="title">Hola, soy Brian</h1>
+        <p>Son las 
+            <span id="currentTime"></span> del <span id="currentDate"></span> 
+        </p>
+        <script>
+            function showTime() {
+                document.getElementById('currentTime').innerHTML = new Date().toLocaleTimeString();
+                document.getElementById('currentDate').innerHTML = new Date().toLocaleDateString();
+            }
+            showTime();
+            setInterval(function () {
+                showTime();
+            }, 1000);
+        </script>
+    </body>
+</html>
